@@ -5,8 +5,12 @@ const authController = require("../controller/authController");
 const Router = express.Router();
 
 Router.route("/").post(
+  authController.protect,
   productController.uploadFile,
   productController.createProduct
 );
-Router.route("/:id").patch(productController.updateProduct);
+Router.route("/:id").patch(
+  authController.protect,
+  productController.updateProduct
+);
 module.exports = Router;

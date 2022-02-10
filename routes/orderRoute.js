@@ -4,7 +4,10 @@ const authController = require("../controller/authController");
 
 const Router = express.Router();
 
-Router.route("/createorder").post(orderController.createOrder);
+Router.route("/createorder").post(
+  authController.protect,
+  orderController.createOrder
+);
 Router.route("/updateorder/:id").patch(
   authController.protect,
   orderController.updateOrder
