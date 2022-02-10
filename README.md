@@ -12,3 +12,5 @@ Features used:
 8) upload csv file for product creation
 9) api features like - sort, filter, paginate, limiting fields
 10) separate error handling utilities.
+
+API documentation : https://documenter.getpostman.com/view/18908868/UVeKpQSu
